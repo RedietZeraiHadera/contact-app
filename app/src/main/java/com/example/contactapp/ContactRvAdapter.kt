@@ -19,7 +19,7 @@ class ContactRvAdapter(var contactList:List<ContactData>):RecyclerView.Adapter<C
     override fun onBindViewHolder(holder: ContactViewHolder, position: Int) {
         val currentContact = contactList.get(position)
         val binding = holder.binding
-        binding.ivContactImage.text=currentContact.avatar
+//        binding.ivContactImage.text=currentContact.avatar
         binding.tvText1.text = currentContact.name
         binding.tvText2.text = currentContact.number
         binding.tvText3.text = currentContact.email
@@ -29,6 +29,6 @@ class ContactRvAdapter(var contactList:List<ContactData>):RecyclerView.Adapter<C
 
 }
 
-class ContactViewHolder(binding:ContactItemListBinding):ViewHolder(binding.root){
+class ContactViewHolder(var binding:ContactItemListBinding):ViewHolder(binding.root){
 
 }
